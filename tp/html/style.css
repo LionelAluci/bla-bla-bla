@@ -1,18 +1,11 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
   color: #333;
 }
-header .logo {
-  display: flex;
-  align-items: center;
-}
 
-header .logo img {
-  margin-right: 20px;
-}
-/* Encabezado */
+/* Header */
 header {
   background-color: #1140a7;
   padding: 15px 20px;
@@ -20,155 +13,178 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 22px;
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  margin-right: 15px;
 }
 
 header nav a {
   color: white;
   text-decoration: none;
-  margin-left: 15px;
+  margin: 0 10px;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 header nav a:hover {
-  text-decoration: underline;
+  color: #ffcc00;
 }
 
 /* Barra de búsqueda */
-section form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.busqueda {
   background-color: #008cff;
   padding: 20px;
+  text-align: center;
 }
 
-section form input,
-section form select {
+.busqueda form {
+  display: inline-flex;
+  width: 60%;
+  max-width: 500px;
+}
+
+.busqueda input {
+  flex: 1;
   padding: 10px;
   border: none;
+  border-radius: 4px 0 0 4px;
   font-size: 16px;
 }
 
-section form input {
-  width: 50%;
-  border-radius: 4px 0 0 4px;
-}
-
-section form select {
-  border-left: 1px solid #ccc;
-}
-
-section form button {
+.busqueda button {
   padding: 10px 15px;
-  border: none;
   background-color: #ffcc00;
-  color: #008cff;
-  font-weight: bold;
+  border: none;
   border-radius: 0 4px 4px 0;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-section form button:hover {
+.busqueda button:hover {
   background-color: #e6b800;
 }
 
 /* Palabra del día */
-section h2 {
-  color: #008cff;
-  margin: 20px 0 10px;
+.palabra-dia {
   text-align: center;
+  margin: 30px 0;
 }
 
-section p {
-  text-align: center;
-  font-size: 18px;
+.palabra-dia h2 {
+  color: #008cff;
+  margin-bottom: 10px;
 }
 
-section em {
-  color: #008cff;
+.palabra-dia em {
+  color: #1140a7;
   font-size: 22px;
   font-weight: bold;
 }
 
-/* Contenido principal */
-.contenedor-principal {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* Main a la izquierda */
+/* Main */
 main {
-  width: 70%;
-  padding-right: 20px;
-  box-sizing: border-box;
+  width: 80%;
+  margin: 0 auto 30px;
+  text-align: center;
 }
 
 main h2 {
   color: #008cff;
+  margin-bottom: 15px;
 }
 
 main p {
   line-height: 1.6;
 }
 
-/* Menú lateral */
-main, aside {
-  display: inline-block;
-  vertical-align: top;
-}
-
-/* Contenido principal */
-main {
-  width: 70%;      /* el contenido ocupa el 70% */
+/* Sidebar bloques */
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   padding: 20px;
-  box-sizing: border-box;
 }
 
-aside {
-  width: 25%;      /* la barra ocupa el 25% */
-  background-color: #f2f2f2;
-  padding: 15px;
-  margin: 20px 0;
+.sidebar .bloque {
+  flex: 1 1 calc(25% - 1rem);
+  background-color: white;
   border-left: 4px solid #003366;
-  box-sizing: border-box;
+  padding: 15px;
+  min-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 20px; 
+  flex: 0 0 22%;
 }
 
-aside h3 {
+.sidebar .bloque h3 {
+  color: #008cff;
   margin-top: 0;
-  color: #008cff;
 }
 
-aside ul {
-  list-style: none;
-  padding: 0;
+.sidebar .bloque:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-aside ul li {
-  margin: 8px 0;
-}
-
-aside ul li a {
-  text-decoration: none;
-  color: #008cff;
-}
-
-aside ul li a:hover {
-  text-decoration: underline;
-}
-
-
-/* Pie de página */
+/* Footer */
 footer {
   text-align: center;
   background-color: #008cff;
   color: white;
   padding: 15px;
   margin-top: 20px;
+}
+
+.palabra-del-dia {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.palabra-del-dia h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fdf6e3;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 20px 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.palabra {
+  font-size: 1.8rem;
+  color: #cca700;
+  margin-bottom: 10px;
+}
+
+.definicion {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.ejemplo {
+  font-style: italic;
+  color: #7f8c8d;
 }
