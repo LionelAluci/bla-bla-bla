@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #1140a7;
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  margin-right: 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ffcc00;
+}
+
+/* Barra de búsqueda */
+.busqueda {
+  background-color: #008cff;
+  padding: 20px;
+  text-align: center;
+}
+
+.busqueda form {
+  display: inline-flex;
+  width: 60%;
+  max-width: 500px;
+}
+
+.busqueda input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.busqueda button {
+  padding: 10px 15px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.busqueda button:hover {
+  background-color: #e6b800;
+}
+
+/* Palabra del día */
+.palabra-dia {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.palabra-dia h2 {
+  color: #008cff;
+  margin-bottom: 10px;
+}
+
+.palabra-dia em {
+  color: #1140a7;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Main */
+main {
+  width: 80%;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+main h2 {
+  color: #008cff;
+  margin-bottom: 15px;
+}
+
+main p {
+  line-height: 1.6;
+}
+
+/* Sidebar bloques */
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.sidebar .bloque {
+  flex: 1 1 calc(25% - 1rem);
+  background-color: white;
+  border-left: 4px solid #003366;
+  padding: 15px;
+  min-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 20px; 
+  flex: 0 0 22%;
+}
+
+.sidebar .bloque h3 {
+  color: #008cff;
+  margin-top: 0;
+}
+
+.sidebar .bloque:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #008cff;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.palabra-del-dia {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.palabra-del-dia h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fdf6e3;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 20px 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.palabra {
+  font-size: 1.8rem;
+  color: #cca700;
+  margin-bottom: 10px;
+}
+
+.definicion {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.ejemplo {
+  font-style: italic;
+  color: #7f8c8d;
+}

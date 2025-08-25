@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diccionario Argentino</title>
+  <link rel="icon" href="libro.png" type="image/png">
+</head>
+<body>
+  
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="icono.png" alt="Logo Diccionario" width="50" height="50">
+      <h1>Diccionario Argentino</h1>
+    </div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Barra de búsqueda -->
+  <section class="busqueda">
+    <form>
+      <input type="text" placeholder="Escriba aquí la palabra">
+      <button type="submit">Consultar</button>
+    </form>
+  </section>
+
+  <!-- Palabra del día -->
+  <div class="palabra-del-dia">
+  <h2>Palabra del Día</h2>
+  <div class="card">
+    <h3 class="palabra">Embole</h3>
+    <p class="definicion">
+      Situacion pesada
+    </p>
+    <p class="ejemplo">
+      Ejemplo: "LIL BRO DONT SEARCH: LIONEL EROME"
+    </p>
+  </div>
+</div>
+
+  <!-- Contenido principal -->
+  <main>
+    <h2>Diccionario Argentino</h2>
+    <p>
+      El <strong>Diccionario Argentino</strong> es una obra en desarrollo que recopila
+      palabras, expresiones y modismos característicos de la Argentina.
+    </p>
+    <p>
+      Nuestro objetivo es facilitar la consulta y el aprendizaje del español
+      en su variante rioplatense, incluyendo ejemplos y contextos de uso. 
+    </p>
+  </main>
+
+  <!-- Secciones dinámicas -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Diccionario Argentino - Proyecto educativo</p>
+  </footer>
+
+  <script>
+    const bloques = [
+      { titulo: "Bloque 1", texto: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+      { titulo: "Bloque 2", texto: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+      { titulo: "Bloque 3", texto: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+      { titulo: "Bloque 4", texto: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+      { titulo: "Bloque 5", texto: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+      { titulo: "Bloque 6", texto: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+      { titulo: "Bloque 7", texto: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+      { titulo: "Bloque 8", texto: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+    ];
+
+    const sidebar = document.getElementById('sidebar');
+    bloques.forEach(b => {
+      const bloque = document.createElement('aside');
+      bloque.classList.add('bloque');
+      bloque.innerHTML = `<h3>${b.titulo}</h3><p>${b.texto}</p>`;
+      sidebar.appendChild(bloque);
+    });
+  </script>
+
+</body>
+</html>
